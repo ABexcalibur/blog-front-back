@@ -1,0 +1,24 @@
+<%- include("_head") %>
+    <header class="masthead" style="background: url(&quot;/assets/img/p02iFC.png&quot;) no-repeat;background-size: cover;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="post-heading">
+                        <h1><%= article.title %></h1>
+                        <h2 class="subheading"><%= article.description %> </h2><span class="meta">Posted by&nbsp;<a href="#"><%= article.name %> </a>&nbsp;on <%= article.createdAt.toLocaleDateString() %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <p><%- article.sanitizedHtml %></p><a href="#"></a>
+                </div>
+            </div>
+        </div>
+    </article>
+<%- include("_foot") %>
