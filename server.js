@@ -26,6 +26,10 @@ app.get('/' , async (req , res)=>{
    });
 })
 
+app.get('/show' , (req , res)=>{
+    res.render('post')
+})
+
 app.get('/contact', ( req, res ) => {
     res.render('contact')
 })
